@@ -21,6 +21,7 @@ header {
 
 header ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
 }
@@ -107,10 +108,20 @@ main {
 
 .memes-ct {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
   width: 50%;
+}
+
+.memes {
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.memes img {
+  max-width: 100%;
+  height: auto;
 }
 
 form h3 {
@@ -137,3 +148,30 @@ footer p {
 }
 
 
+@media only screen and (max-width:900px){
+  header {
+    height: auto;
+  }
+
+  .banner-ct {
+    background: none;
+  }
+
+  .banner {
+    top: 0rem;
+  }
+
+  .banner h1, .banner h2 {
+    font-size: 2rem;
+  }
+
+  #collections h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 638px){
+  .banner {
+    background-color: transparent;
+  }
+}
